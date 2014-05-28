@@ -45,11 +45,11 @@ def loginResultProcessor(login_output, loginer):
         return 'OK'
 
 if __name__ == '__main__':
-    loginer = login.Loginer('s13111155', '8vwg38')
+    loginer = login.Loginer('学号', '密码')
     login_output = loginer.login()
     login_status = loginResultProcessor(login_output, loginer)
     if login_status == 'Occupied' :
-        Usurper = loginUsurp.LoginUsurper('s13111155', '8vwg38')
+        Usurper = loginUsurp.LoginUsurper('学号', '密码')
         what_todo = Usurper.Induce()
         if what_todo == 'usurp' :
             usurp_output = Usurper.kickOffAndLogin()
